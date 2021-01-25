@@ -22,7 +22,9 @@ function descargarNuevosPedidos() {
 
 const app = async () => {
   try {
-    const respuesta = await Promise.all([])
+    const respuesta = await Promise.all([descargarNuevosClientes(), descargarNuevosPedidos()])
+    console.log(respuesta[0])
+    console.log(respuesta[1])
   } catch (error) {
     console.log(error)
   }
